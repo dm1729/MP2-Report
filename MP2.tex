@@ -1,0 +1,264 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{cite}
+\usepackage{tikz}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{bbm}
+\usepackage{dsfont}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{relsize}
+\usepackage{csquotes}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{xcolor}
+%\usepackage{fullpage}
+\usepackage[utf8]{inputenc}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue}
+\usepackage{verbatim}
+\setlength{\parindent}{0cm}
+\newcommand{\dd}{\hspace{0.5ex}\text{d}}
+\newcommand{\R}{\mathbb{R}}
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{cor}[theorem]{Corollary}
+\newtheorem{prop}[theorem]{Proposition}
+\theoremstyle{definition}
+\newtheorem{conj}{Conjecture}
+\newtheorem*{notation}{Notation}
+\newtheorem{assume}{Assumption}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{ex}[theorem]{Example}
+\newtheorem{defn}[theorem]{Definition}
+\newtheorem{rk}[theorem]{Remark}
+
+%%%% PREAMBLE FROM ROBIN EVANS %%%%%
+%\usepackage{amsthm}
+%\usepackage{amsmath}
+%\usepackage{amssymb}
+
+\usepackage{algorithm2e}
+
+\usepackage[normalem]{ulem}
+
+%\usepackage[round]{natbib}
+
+%\usepackage{a4wide}
+\usepackage{bbm}
+%\usepackage{graphicx}
+%\usepackage{tikz}
+\usetikzlibrary{positioning}
+
+\usepackage{longtable}
+
+\usepackage{caption}
+\captionsetup[table]{
+  skip=-5pt,
+  format=plain,
+  labelsep=newline,
+  justification=centering,
+  font=small,
+  labelfont=sc,
+  textfont=it
+}
+\captionsetup[longtable]{
+  skip=5pt,
+  format=plain,
+  labelsep=newline,
+  justification=centering,
+  font=small,
+  labelfont=sc,
+  textfont=it
+}
+\captionsetup[figure]{
+  format=plain,
+  %labelsep=newline,
+  justification=justified,
+  font=small,
+  labelfont=sc,
+  textfont=it
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\newcommand{\RR}{\mathbbm{R}}
+%\newcommand{\ZZ}{\mathbbm{Z}}
+\DeclareMathOperator{\interior}{int}
+\DeclareMathOperator{\conv}{conv}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\theoremstyle{plain} % Heading is bold, text italic.
+%\newtheorem{theorem}{Theorem}
+%\newtheorem{lemma}[theorem]{Lemma}
+%\newtheorem{proposition}[theorem]{Proposition}
+%\newtheorem{corollary}[theorem]{Corollary}
+%\newtheorem{conjecture}{Conjecture}
+%\newtheorem*{theorem}{Theorem~1.1}
+%\newtheorem*{cor2}{Corollary 1.2}
+%\newtheorem*{them3}{Theorem~1.3}
+
+%\theoremstyle{definition}  % Heading is bold, text is roman
+%\newtheorem{definition}{Definition}
+%\newtheorem{example}{Example}
+
+%\theoremstyle{remark}  % Heading is italic, text is roman
+%\newtheorem*{remark}{Remark}
+%\newtheorem*{note}{Note}
+%\newtheorem{claim}{Claim}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Shortcuts (add your own...):
+%\renewcommand{\P}{{\mathcal P}}
+%\newcommand{\F}{{\mathcal F}}
+%\newcommand{\G}{{\mathcal G}}
+%\newcommand{\e}{{\mathbf e}}
+%\newcommand{\m}{{\mathbf m}}
+%\renewcommand{\v}{{\mathbf v}}
+%\renewcommand{\t}{{\mathbf t}}
+%\newcommand{\x}{{\mathbf x}}
+%\renewcommand{\u}{{\mathbf u}}
+%\newcommand{\w}{{\mathbf w}}
+%\newcommand{\y}{{\mathbf y}}
+%\renewcommand{\a}{{\mathbf a}}
+%\renewcommand{\b}{{\mathbf b}}
+%\newcommand{\p}{{\mathbf p}}
+%\newcommand{\0}{{\mathbf 0}}
+%\newcommand{\1}{{\mathbf 1}}
+%\newcommand{\N}{{\mathbb N}}
+%\newcommand{\Z}{{\mathbb Z}}
+%\newcommand{\PP}{{\mathbb P}}
+%\newcommand{\Q}{{\mathcal Q}}
+%\newcommand{\R}{{\mathbb R}}
+%\newcommand{\C}{{\mathbb C}}
+%\renewcommand{\H}{{\mathcal H}}
+%\newcommand{\V}{{\mathcal V}}
+%\newcommand{\T}{{\mathcal T}}
+\newcommand{\M}{{\mathcal M}}
+%\newcommand{\A}{{\mathcal A}}
+%\newcommand{\K}{{\mathcal K}}
+%\newcommand{\Lat}{{\mathcal L}}
+%\renewcommand{\L}{{\mathcal L}}
+%\renewcommand{\S}{{\mathcal S}}
+%\newcommand{\IN}{\mathsf{in}}
+%%\newcommand{\conv}{\operatorname{conv}}
+%\newcommand{\hilb}{\operatorname{Hilb}}
+%\newcommand{\wordlength}{\operatorname{w}}
+%\newcommand{\growth}{\operatorname{S}}
+%\newcommand{\cone}{\operatorname{cone}}
+%\newcommand{\aff}{\operatorname{aff}}
+%\newcommand{\E}{\operatorname{Ehr}}
+%\newcommand{\BP}{\operatorname{BiPyr}}
+%\renewcommand{\vert}{\operatorname{vert}}
+%\newcommand{\triang}{\operatorname{triang}}
+%\newcommand{\total}{\operatorname{total}}
+\newcommand{\rank}{\text{rank}}
+\newcommand{\diag}{\operatorname{diag}}
+
+\DeclareMathOperator{\EM}{EM}
+
+%\def\th{^{\text{th}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\setlength{\unitlength}{.05cm}
+
+\newcommand{\ojo}[1]{{\sffamily\bfseries\boldmath[#1]}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\iid}{\stackrel{\text{iid}}{\sim}}
+\title{Maximum Likelihood Estimation of the Latent Class Model through Model Boundary Decomposition}
+\author{Daniel Moss}
+\begin{document}
+\maketitle
+
+\section{Introduction}
+The \textit{binary latent class model} is an instance of a model with incomplete data. While the EM algorithm is commonly used in such a setup, it comes with no guarantee of reaching the global optimum (i.e. the actual MLE). Thus, we study the MLE from a theoretical point of view.
+
+\vspace{1ex}
+By a \textit{model} we mean a collection of candidate laws $\mathcal{P}$. In the discrete setting, we are always fully parametric so misspecification is not a concern (that is, we can write down a parametric model capturing all possibilities).
+
+\vspace{2ex}
+In our setting, we denote by $\mathcal{M}_{n,r}$ the model corresponding to $n$ binary observed nodes $X=(X_1,X_2,\dots,X_n)\in\{1,2\}^n$, which are conditionally independent given an unobserved variable $Z\in\{1,\dots,r\}$. We slightly abuse notation by letting this set define the set of p.m.f.s for the model, which are technically densities with respect to the counting measure on the (finite) observation space. The following diagram, taken from \cite{allman2017maximum}, gives a graphical representation of $\M_{5,2}$.
+
+\begin{figure}[htp]
+\centering
+\tikzstyle{vertex}=[circle,fill=black,minimum size=5pt,inner sep=0pt]
+\tikzstyle{hidden}=[circle,draw,minimum size=5pt,inner sep=0pt]
+  \begin{tikzpicture}
+  \node[vertex] (1) at (-.7,.7)  [label=above:$1$] {};
+    \node[vertex] (2) at (-.8,-.4)  [label=left:$5$] {};
+    \node[vertex] (3) at (.4,.9) [label=above:$2$]{};
+    \node[vertex] (4) at (.95,.1) [label=right:$3$]{};
+    \node[vertex] (5) at (.3,-0.9) [label=right:$4$]{};
+    \node[hidden] (a) at (0,0) {};
+    \draw[line width=.3mm] (a) to (1);
+    \draw[line width=.3mm] (a) to (2);
+    \draw[line width=.3mm] (a) to (3);
+        \draw[line width=.3mm] (a) to (4);
+    \draw[line width=.3mm] (a) to (5);
+  \end{tikzpicture}
+  \caption{The star graph model with $5$ leaves. The internal vertex represents an unobserved random variable.}\label{fig:star}
+\end{figure}
+We can parametrise this model by the p.m.f. $\lambda\in\Delta_{r-1}$ of the latent variable, where $\Delta_{k-1}\in\mathbb{R}^k$ is the $(k-1)-$dimensional simplex embedded into $k$-dimensional space, and the conditional laws of the $X_i$, which are denoted
+$$ 
+A^{(i)} \, = \, \left( \begin{array}{cc} a_{11}^{(i)} &  a_{12}^{(i)} \\[.3cm] \vdots & \vdots \\[.3cm] a_{r1}^{(i)} &  a_{r2}^{(i)} \end{array} \right), \;\;\;\; i=1,\ldots, n,
+$$
+where the matric is stochastic (i.e. row sum is zero). We then write $$\theta=(\lambda,A^{(1)},\dots,A^{(n)})$$ for the full parameter, and the parametrisation is given by
+$\theta\mapsto p(\theta)\in\Delta_{2^n-1}$
+where
+\begin{equation}
+    \Pr(X_1=i_1,\dots X_n=i_n;\theta)=p_{i_1,\dots,i_n}(\theta)=\sum_{k=1}^r\lambda_i\prod_{j=1}^na_{ki_j}^{(j)}
+\end{equation}
+The map is injective (when $n\geq 3$? Kruskal/Allman09?) so these parameters are identifiable.\footnote{Even if they aren't, does it matter? Are we trying to infer the latent structure or just the p.m.f. of the $X_1,\dots,X_n$. It seems to me that latent models may be used to understand more deeply the structure of the joint law, but in this setting they have a secondary use of allowing certain algebraic decompositions.} Moreover, this parametrisation shows that the p.m.f. is a binary tensor of $\textit{nonnegative rank}$ at most $r$, since it is the sum of $r$ nonnegative simple tensors (ones of the form $T_{ijk}=u_iv_kw_k$ etc.)
+
+\vspace{1ex}
+We will be primarily interested in the setting $r=2$, and so we write $\mathcal{M}_n$=$\M_{n,2}$ for convenience.
+
+\vspace{2ex}
+It is clear that $\mathcal{M}_n\subset\Delta_{2^n-1}$. Suppose now we are interested in the problem of maximum likelihood estimation in this model. Write $$U=(u_{i_1,\dots,i_n})_{i_1,\dots,i_n\in\{1,2\}}$$ for the count data from an observation\footnote{One observation $X^{i}$ amounts to observing a copy of the vector $X=(X_1,\dots,X_n)$} of size $N$. Thus the sum of all elements in $U$ is equal to $N$. Then the likelihood is given by
+$$L_N(X^1,\dots,X^N)=\sum_{i_1,\dots,i_n\in\{1,2\}}u_{i_1,\dots,i_n}\log p_{i_1,\dots,i_n}(\theta)$$
+It is straightforward to see that the MLE (for the p.m.f.) over the whole space $\Delta_{2^n-1}$ is given by the proportions of count data. However, the inclusion $\mathcal{M}_n\subset\Delta_{2^n-1}$ is strict and thus this need not be the MLE over the model we consider. In the case where the count data does not define a p.m.f. in $\M_n$, the MLE over this model will be found on the boundary (why?).
+
+\vspace{2ex}
+In order to understand the structure of $\mathcal{M}_n$, we give a \textit{semi-algebraic description} of the set as a subset of the simplex (that is, one described by equalities and inequalities).
+
+\vspace{2ex}
+This description is given by Theorem 2 in \cite{allman2017maximum}, which says that for the $r=2$ case, tensors of non-negative rank at most two are exactly those which are \textit{supermodular} and which have \textit{flattening rank} at most two. The supermodularity conditions will be referred to as the \textit{inequality conditions} (are these the same thing as requiring signed MTP$_2$? c.f. \cite{lauritzen2019total} page 9). To define the flattening rank, we define a matrix flattening of a binary tensor $P$ as the $2^{\lvert\Gamma\rvert}\times2^{n-\lvert\Gamma\rvert}$ matrix obtained by placing suffices corresponding to $\Gamma\subset\{1,\dots,n\}$ along the rows, and others along the columns. For example, if $\Gamma=\{1,2\}$ and $n=5$ we get
+$$\begin{pmatrix} 
+p_{11111} & p_{11211} & p_{11121} & p_{11221} & p_{11112} & p_{11212} & p_{11122} & p_{11222}\\
+p_{21111} & p_{21211} & p_{21121} & p_{21221} & p_{21112} & p_{21212} & p_{21122} & p_{21222}\\
+p_{12111} & p_{12211} & p_{12121} & p_{12221} & p_{12112} & p_{12212} & p_{12122} & p_{12222}\\
+p_{22111} & p_{22211} & p_{22121} & p_{22221} & p_{22112} & p_{22212} & p_{22122} & p_{22222}\\
+\end{pmatrix}$$
+The flattening rank is then the maximal rank of any such flattenings. These constraints are known as the \textit{equality} constraints (because all three-minors must vanish).
+
+\vspace{2ex}
+Armed with this semi-algebraic description, the authors in \cite{allman2017maximum} then go on to decompose the boundary of $\mathcal{M}_n$ (`boundary straficiation') into certain collections (five types) of components of different dimension. These boundary strata correspond to certain `context-specific' conditional independencies, meaning (I think) that if the MLE lies on this strata then we are additionally maxing a sort of `most likely structure' comment. An example of one such strata `type 5' is the case of full (unconditional) independence. The remainder of the chapter in which this decomposition result is stated is then dedicated to proving this result.
+
+\section{Ising model}
+[Relation to $\M_{n,r}$?]
+The \textit{Ising model} is defined by
+$$$$
+Where $V=\{1,\dots,n\}$. In order for these distributions to be signed MTP$_2$, we require the following inequalities to hold:
+$$$$
+or permutations thereof by swaping the label of the observed variabls (thereby changing some choice of 2 of the three $\geq$ to $\leq$). We can fit this model, either through GLM (Poisson family) and then checking the inequalities, or by using the technique in the paper (cite). Then we can check if the \textit{equality} conditions hold, which would mean that the fitted distribution when we assume our observations arise from an Ising model are members of the $\mathcal{M}_n$ parametric family (the latent parameters may then be identified for $n\geq 3$ if so desired).
+
+\vspace{1ex}
+The purpose of this approach is to fit an $\mathcal{M}_n$ model by making the simplifying assumption that the observations come from a more computationally convenient signed MTP$_2$ distribution, and then see if fitting this model indeed fits the particular signed MTP$_2$ distribution in which we are interested.t
+
+\vspace{1ex}
+What is $C^\wedge$? [Dual cone]
+
+\vspace{1ex}
+Relation between exponential family models and latent variable models? Both signed MTP2, rank condition? Refs linking the two?
+
+\pagebreak
+\bibliographystyle{plain}
+\bibliography{refs}
+\end{document}
