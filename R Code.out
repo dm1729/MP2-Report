@@ -1,0 +1,19 @@
+\BOOKMARK [1][-]{section.1}{Global notation}{}% 1
+\BOOKMARK [1][-]{section.2}{General Ising Model code}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{IsingDesign.R}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{IsingDesignQ.R}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{IsingCounts.R}{section.2}% 5
+\BOOKMARK [1][-]{section.3}{Sampling from Ising Models}{}% 6
+\BOOKMARK [2][-]{subsection.3.1}{DirectSampler.R}{section.3}% 7
+\BOOKMARK [2][-]{subsection.3.2}{GibbsSampler.R}{section.3}% 8
+\BOOKMARK [1][-]{section.4}{Equality constraints}{}% 9
+\BOOKMARK [2][-]{subsection.4.1}{FlatteningRank4.R}{section.4}% 10
+\BOOKMARK [2][-]{subsection.4.2}{FlatteningRank.R}{section.4}% 11
+\BOOKMARK [1][-]{section.5}{Fitting MTP2 Ising Models}{}% 12
+\BOOKMARK [2][-]{subsection.5.1}{glmIsing.R}{section.5}% 13
+\BOOKMARK [2][-]{subsection.5.2}{IsingIPS.R}{section.5}% 14
+\BOOKMARK [3][-]{subsubsection.5.2.1}{CanonicalJ.R}{subsection.5.2}% 15
+\BOOKMARK [3][-]{subsubsection.5.2.2}{Delta.R}{subsection.5.2}% 16
+\BOOKMARK [3][-]{subsubsection.5.2.3}{LambdaStar.R}{subsection.5.2}% 17
+\BOOKMARK [3][-]{subsubsection.5.2.4}{FirstMoment.R}{subsection.5.2}% 18
+\BOOKMARK [3][-]{subsubsection.5.2.5}{SecondMoment.R}{subsection.5.2}% 19

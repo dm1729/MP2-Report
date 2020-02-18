@@ -1,0 +1,221 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{cite}
+\usepackage{tikz}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{bbm}
+\usepackage{dsfont}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{relsize}
+\usepackage{csquotes}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{xcolor}
+%\usepackage{fullpage}
+\usepackage[utf8]{inputenc}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue}
+\usepackage{verbatim}
+\setlength{\parindent}{0cm}
+\newcommand{\dd}{\hspace{0.5ex}\text{d}}
+\newcommand{\R}{\mathbb{R}}
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{cor}[theorem]{Corollary}
+\newtheorem{prop}[theorem]{Proposition}
+\theoremstyle{definition}
+\newtheorem{conj}{Conjecture}
+\newtheorem*{notation}{Notation}
+\newtheorem{assume}{Assumption}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{ex}[theorem]{Example}
+\newtheorem{defn}[theorem]{Definition}
+\newtheorem{rk}[theorem]{Remark}
+
+%%%% PREAMBLE FROM ROBIN EVANS %%%%%
+%\usepackage{amsthm}
+%\usepackage{amsmath}
+%\usepackage{amssymb}
+
+\usepackage{algorithm2e}
+
+\usepackage[normalem]{ulem}
+
+%\usepackage[round]{natbib}
+
+%\usepackage{a4wide}
+\usepackage{bbm}
+%\usepackage{graphicx}
+%\usepackage{tikz}
+\usetikzlibrary{positioning}
+
+\usepackage{longtable}
+
+\usepackage{caption}
+\captionsetup[table]{
+	skip=-5pt,
+	format=plain,
+	labelsep=newline,
+	justification=centering,
+	font=small,
+	labelfont=sc,
+	textfont=it
+}
+\captionsetup[longtable]{
+	skip=5pt,
+	format=plain,
+	labelsep=newline,
+	justification=centering,
+	font=small,
+	labelfont=sc,
+	textfont=it
+}
+\captionsetup[figure]{
+	format=plain,
+	%labelsep=newline,
+	justification=justified,
+	font=small,
+	labelfont=sc,
+	textfont=it
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\newcommand{\RR}{\mathbbm{R}}
+%\newcommand{\ZZ}{\mathbbm{Z}}
+\DeclareMathOperator{\interior}{int}
+\DeclareMathOperator{\conv}{conv}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\theoremstyle{plain} % Heading is bold, text italic.
+%\newtheorem{theorem}{Theorem}
+%\newtheorem{lemma}[theorem]{Lemma}
+%\newtheorem{proposition}[theorem]{Proposition}
+%\newtheorem{corollary}[theorem]{Corollary}
+%\newtheorem{conjecture}{Conjecture}
+%\newtheorem*{theorem}{Theorem~1.1}
+%\newtheorem*{cor2}{Corollary 1.2}
+%\newtheorem*{them3}{Theorem~1.3}
+
+%\theoremstyle{definition}  % Heading is bold, text is roman
+%\newtheorem{definition}{Definition}
+%\newtheorem{example}{Example}
+
+%\theoremstyle{remark}  % Heading is italic, text is roman
+%\newtheorem*{remark}{Remark}
+%\newtheorem*{note}{Note}
+%\newtheorem{claim}{Claim}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Shortcuts (add your own...):
+%\renewcommand{\P}{{\mathcal P}}
+%\newcommand{\F}{{\mathcal F}}
+%\newcommand{\G}{{\mathcal G}}
+%\newcommand{\e}{{\mathbf e}}
+%\newcommand{\m}{{\mathbf m}}
+%\renewcommand{\v}{{\mathbf v}}
+%\renewcommand{\t}{{\mathbf t}}
+%\newcommand{\x}{{\mathbf x}}
+%\renewcommand{\u}{{\mathbf u}}
+%\newcommand{\w}{{\mathbf w}}
+%\newcommand{\y}{{\mathbf y}}
+%\renewcommand{\a}{{\mathbf a}}
+%\renewcommand{\b}{{\mathbf b}}
+%\newcommand{\p}{{\mathbf p}}
+%\newcommand{\0}{{\mathbf 0}}
+%\newcommand{\1}{{\mathbf 1}}
+%\newcommand{\N}{{\mathbb N}}
+%\newcommand{\Z}{{\mathbb Z}}
+%\newcommand{\PP}{{\mathbb P}}
+%\newcommand{\Q}{{\mathcal Q}}
+%\newcommand{\R}{{\mathbb R}}
+%\newcommand{\C}{{\mathbb C}}
+%\renewcommand{\H}{{\mathcal H}}
+%\newcommand{\V}{{\mathcal V}}
+%\newcommand{\T}{{\mathcal T}}
+\newcommand{\M}{{\mathcal M}}
+%\newcommand{\A}{{\mathcal A}}
+%\newcommand{\K}{{\mathcal K}}
+%\newcommand{\Lat}{{\mathcal L}}
+%\renewcommand{\L}{{\mathcal L}}
+%\renewcommand{\S}{{\mathcal S}}
+%\newcommand{\IN}{\mathsf{in}}
+%%\newcommand{\conv}{\operatorname{conv}}
+%\newcommand{\hilb}{\operatorname{Hilb}}
+%\newcommand{\wordlength}{\operatorname{w}}
+%\newcommand{\growth}{\operatorname{S}}
+%\newcommand{\cone}{\operatorname{cone}}
+%\newcommand{\aff}{\operatorname{aff}}
+%\newcommand{\E}{\operatorname{Ehr}}
+%\newcommand{\BP}{\operatorname{BiPyr}}
+%\renewcommand{\vert}{\operatorname{vert}}
+%\newcommand{\triang}{\operatorname{triang}}
+%\newcommand{\total}{\operatorname{total}}
+\newcommand{\rank}{\text{rank}}
+\newcommand{\diag}{\operatorname{diag}}
+
+\DeclareMathOperator{\EM}{EM}
+
+%\def\th{^{\text{th}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\setlength{\unitlength}{.05cm}
+
+\newcommand{\ojo}[1]{{\sffamily\bfseries\boldmath[#1]}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\iid}{\stackrel{\text{iid}}{\sim}}
+\title{R Code for Mini Project 2}
+\author{Daniel Moss}
+\begin{document}
+\maketitle
+\section{Global notation}
+Unless otherwise specified, we adopt the following conventions:
+\begin{itemize}
+	\item $n$ is the number of nodes in the model
+	\item $N$ is the number of iterations
+\end{itemize}
+
+\section{General Ising Model code}
+\subsection{IsingDesign.R}
+Input $n$. Output a Design Matrix which is $2^n$ by $n$
+\subsection{IsingDesignQ.R}
+Input $n$. Output a Design Matrix which is $2^n$ by $\frac{n(n+1)}{2}$ whose columns correspond to  $X_1,X_2,\dots,X_n,X_1X_2,\dots,X_1X_n,X_2X_3,\dots,X_2X_n,\dots X_{n-1}X_n$.
+\subsection{IsingCounts.R}
+Outputs a `response vector' of length $2^n$ for use when fitting GLMs (or otherwise) counting each sign pattern, in the usual binary ordering. *Input dataset, though this currently generates one using Gibbs sampling, so input $N$*
+\section{Sampling from Ising Models}
+\subsection{DirectSampler.R}
+Input $N,n$. Gives $N$ direct samples from the Ising model of size $n$ (i.e. by computing the pmf). Currently lambda, mu inputs are manually changed inside the function, and are set to be normal distributions with a given seed.
+\subsection{GibbsSampler.R}
+As above, but sample is produced via Gibbs sampling.
+\section{Equality constraints}
+\subsection{FlatteningRank4.R}
+Input a four by four matrix to compute the flattening rank.
+\subsection{FlatteningRank.R}
+Work in progress, will compute flattening rank of $n$ by $n$ matrix.
+\section{Fitting MTP$_2$ Ising Models}
+\subsection{glmIsing.R}
+Input $n$ and $N$. Generates data using IsingCounts.R and regresses this vector against the output of IsingDesignQ.R using a Poisson GLM (log link). Note that on the log scale, using the counts as opposed to the normalized counts only affects the constant.
+\subsection{IsingIPS.R}
+Implements the algorithm of \cite{lauritzen2019total}. Input sample first and second moments, dimension of model (not really needed) and tolerance. Requires a number of subroutines detailed below.
+\subsubsection{CanonicalJ.R}
+Inputs $i,j$ and $Y$, the current estimate of the mass function. Outputs $J_{ij}$ (as defined in the reference).
+\subsubsection{Delta.R}
+Input $i,j,Y,x,M$ and returns $\Delta_{ij}$ (as defined in the reference).
+\subsubsection{LambdaStar.R}
+Input $i,j,Y,x,M$ and optionally $J_{ij}$ (will probably remove this input). Output $\lambda^*$ (as defined in the reference).
+\subsubsection{FirstMoment.R}
+Finds the first moment $\mu$ of an inputted mass function (where element $i$ of the pmf vector corresponds to the $i^{th}$ sign pattern when written in the binary ordering).
+\subsubsection{SecondMoment.R}
+As above but computes second moment $\Xi$.
+
+\bibliographystyle{plain}
+\bibliography{refs}
+\end{document}
